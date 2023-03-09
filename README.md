@@ -1,6 +1,6 @@
 # Things We've Changed
 
-1. Patch `rtrans.f`
+1. Patch `rtrans.f`, where originally when compiled will throw out following error
 ```bash
 gfortran -cpp -g -O2 -fno-automatic -fcheck=bounds -fimplicit-none -c rtrans.f
 rtrans.f:1342:55:
