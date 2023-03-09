@@ -1339,7 +1339,7 @@ c                                    cosines
             NCOS   = 1
             ANGCOS = -UMU0
 
-            CALL LEPOLY( NCOS, MAZIM, MXCMU, NSTR - 1, ANGCOS, YLM0 )
+            CALL LEPOLY( NCOS, MAZIM, MXCMU, NSTR - 1, [ANGCOS], YLM0 )
 
          END IF
 
