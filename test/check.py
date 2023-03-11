@@ -22,7 +22,7 @@ def check(check_path, test_path):
     checks = []
     rdiffvals = []
     for key, refvals in spec_ref.items():
-        if key in spec_test:
+        if (key in spec_test) and (len(spec_test[key])>0):
             checkvals = spec_test[key]
             diffs = [checkval - refval for checkval, refval in zip(checkvals, refvals)]
             rdiffs = [0 if c == 0 else d/c for d, c in zip(diffs, checkvals)]
