@@ -7,6 +7,9 @@ Also, btw, the newest `README` is actually located in `pysrc/` ([portal](pysrc/R
 # How to Run
 
 - Run `./install.sh`
+    - All arguments are passed to (all) `make` commands (except `make install`
+
+The reason it's recommended to install through the script is because within `pysrc/`, you **MUST** run `make source` before `sudo make install` (which isn't documented in original author's README). If you directly run `sudo make install`, it'll compile fortran codes as admin, which will cause some permission issues.
 
 ## Preping Env
 

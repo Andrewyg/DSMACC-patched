@@ -2,8 +2,8 @@
 
 LDFLAGS=-L/usr/lib/x86_64-linux-gnu/ CFLAGS=-static ./configure
 
-make
+make "$@"
 
 cd pysrc/
-make source
+make source "$@"
 sudo make install
