@@ -114,6 +114,10 @@ distclean: clean
 
 # all object files *.o depend on their source files *.f90
 # the object files are created with the "-c" compiler option
+dsmacc_Rates.o: dsmacc_Rates.f90
+	$(FC) -cpp -g -O2 -fcheck=bounds -fimplicit-none $(LINCLUDES) -c dsmacc_Rates.f90
+dsmacc_Util.o: dsmacc_Util.f90
+	$(FC) -cpp -g -O2 -fcheck=bounds -fimplicit-none $(LINCLUDES) -c dsmacc_Util.f90
 %.o: %.f90
 	$(FC) $(F90FLAGS) $(LINCLUDES) -c $<
 
