@@ -1,5 +1,18 @@
 For the original `README.md` from `barronh/DSMACC`, please check [README.orig.md](README.orig.md).
 
+Also, btw, the newest `README` is actually located in `pysrc/` ([portal](pysrc/README.md)).
+
+---
+
+# How to Run
+
+## Preping Env
+
+- `sudo apt-get install gcc git wget python3 python3-pip bison flex gfortran -y`
+- `pip install numpy matplotlib`
+- `sudo pip install numpy` (for `setuptools`)
+- `if [ ! -f "/usr/bin/python" ] && [ -f "/usr/bin/python3" ]; then sudo ln -s /usr/bin/python3 /usr/bin/python; fi` (This is considered an overall better fix, as throughout theproject Makefiles uses `python` for `python3`. For the reason not changing Makefiles is...cause some other distro already deprecated `python2` and uses `python` solely for `python3`)
+
 ---
 
 # Things We've Changed
