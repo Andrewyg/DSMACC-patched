@@ -19,11 +19,11 @@ CC=gcc
 #    turns on optimisation. If you are experiencing problems you may try 
 #    "-g" to include debuging informations.
 
-CFLAGS=-g -O2
+CFLAGS=-static
 CPPFLAGS=
 
 # 3. Linker flags to ensure access to the libraries
-LDFLAGS=
+LDFLAGS=-L/usr/lib/x86_64-linux-gnu/
 
 # 4. The name of the fortran compiler you want to use. Normaly this 
 #    is either GNU Fortran compiler (gfortran), the Intel Fortran
@@ -39,7 +39,7 @@ FC=gfortran
 #    turns on optimisation. If you are experiencing problems you may try 
 #    "-g" to include debuging informations.
 
-F90FLAGS=-cpp -g -O2 -fno-automatic -fcheck=bounds -fimplicit-none
+F90FLAGS=-cpp -g -O2 -fno-automatic -fPIC -fcheck=bounds -fimplicit-none
 
 SRCS =	dsmacc_fjx72.F90 cld_sub_mod.F90 fjx_init_mod.F90 fjx_sub_mod.F90  \
 	cmn_fjx_mod.F90 

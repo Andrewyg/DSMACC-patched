@@ -24,7 +24,7 @@ CC=gcc
 #    turns on optimisation. If you are experiencing problems you may try 
 #    "-g" to include debuging informations.
 
-CFLAGS=-g -O2
+CFLAGS=-static
 CPPFLAGS=
 
 # 3. KPP requires a lexical analizer like FLEX to be used.
@@ -42,7 +42,7 @@ FLEX_LIB=-lfl
 #    If libfl.a is in a standard location, this can be blank.
 #    Otherwise LDFLAGS=-L<DIRPATH> where DIRPATH is the path that
 #    contains libfl.a
-LDFLAGS=
+LDFLAGS=-L/usr/lib/x86_64-linux-gnu/
 
 # 6. The name of the fortran compiler you want to use. Normaly this 
 #    is either GNU Fortran compiler (gfortran), the Intel Fortran
@@ -58,7 +58,7 @@ FC=gfortran
 #    turns on optimisation. If you are experiencing problems you may try 
 #    "-g" to include debuging informations.
 
-F90FLAGS=-cpp -g -O2 -fno-automatic -fcheck=bounds -fimplicit-none
+F90FLAGS=-cpp -g -O2 -fno-automatic -fPIC -fcheck=bounds -fimplicit-none
 
 TOPDIR=$(realpath .)
 

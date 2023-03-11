@@ -48,7 +48,7 @@ CC=gcc
 #    turns on optimisation. If you are experiencing problems you may try 
 #    "-g" to include debuging informations.
 
-CFLAGS=-g -O2
+CFLAGS=-static
 CPPFLAGS=
 
 # 3. The name of your lexical analizer. KPP requires FLEX to be used.
@@ -62,7 +62,7 @@ FLEX=flex
 #    If libfl.a is in a standard location, this can be blank.
 #    Otherwise LDFLAGS=-L<DIRPATH> where DIRPATH is the path that
 #    contains libfl.a
-LDFLAGS=
+LDFLAGS=-L/usr/lib/x86_64-linux-gnu/
 
 # 4. Flex library. Can either be -lfl or the full path to a libfl.a
 FLEX_LIB=-lfl
@@ -81,7 +81,7 @@ FC=gfortran
 #    turns on optimisation. If you are experiencing problems you may try 
 #    "-g" to include debuging informations.
 
-F90FLAGS=-cpp -g -O2 -fno-automatic -fcheck=bounds -fimplicit-none
+F90FLAGS=-cpp -g -O2 -fno-automatic -fPIC -fcheck=bounds -fimplicit-none
 
 all: kpp
 
