@@ -6,6 +6,8 @@ Also, btw, the newest `README` is actually located in `pysrc/` ([portal](pysrc/R
 
 # How to Run
 
+- Run `./install.sh`
+
 ## Preping Env
 
 - `sudo apt-get install gcc git wget python3 python3-pip bison flex gfortran`
@@ -27,4 +29,5 @@ rtrans.f:1342:55:
 Error: Rank mismatch in argument ‘mu’ at (1) (rank-1 and scalar)
 ```
 2. Compile `dsmacc_Rates.f90` and `dsmacc_Util.f90` in `src/` without the flag `-fno-automatic`
+3. Regenerate Makefiles (with proper flags)
 4. Remove old and create new `install.sh` to help you build all dependencies in correct order.
