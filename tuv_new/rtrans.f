@@ -1151,7 +1151,7 @@ c     .. Local Scalars ..
       LOGICAL   COMPAR, LYRCUT, PASS1
       INTEGER   IQ, IU, J, KCONV, L, LC, LEV, LU, MAZIM, NAZ, NCOL,
      &          NCOS, NCUT, NN
-      REAL      ANGCOS, AZERR, AZTERM, BPLANK, COSPHI, DELM0, DITHER,
+      REAL      ANGCOS(1), AZERR, AZTERM, BPLANK, COSPHI, DELM0, DITHER,
      &          DUM, RPD, SGN, TPLANK
 c     ..
 c     .. Local Arrays ..
@@ -1337,9 +1337,9 @@ c                                    cosines
          IF( FBEAM.GT.0.0 ) THEN
 
             NCOS   = 1
-            ANGCOS = -UMU0
+            ANGCOS(1) = -UMU0
 
-            CALL LEPOLY( NCOS, MAZIM, MXCMU, NSTR - 1, [ANGCOS], YLM0 )
+            CALL LEPOLY( NCOS, MAZIM, MXCMU, NSTR - 1, ANGCOS, YLM0 )
 
          END IF
 
