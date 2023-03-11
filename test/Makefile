@@ -1,3 +1,4 @@
+SHALL=/bin/bash
 export KPP_HOME=$(PWD)/../kpp
 all:
 	make check
