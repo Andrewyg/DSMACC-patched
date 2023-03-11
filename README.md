@@ -40,3 +40,4 @@ Error: Rank mismatch in argument ‘mu’ at (1) (rank-1 and scalar)
 # TODO
 
 - [ ] Extract time elapse/interval into parameters within models in `pysrc/`
+- [ ] Check time and don't re-run if `*conc.dat` is up-to-date?
