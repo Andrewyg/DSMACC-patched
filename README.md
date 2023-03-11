@@ -14,7 +14,7 @@ The reason it's recommended to install through the script is because within `pys
 ## Preping Env
 
 - `sudo apt-get install gcc git wget python3 python3-pip bison flex gfortran`
-- `pip install numpy matplotlib`
+- `pip install numpy matplotlib pandas scipy`
 - `sudo pip install numpy` (for `setuptools`)
 - `if [ ! -f "/usr/bin/python" ] && [ -f "/usr/bin/python3" ]; then sudo ln -s /usr/bin/python3 /usr/bin/python; fi` (This is considered an overall better fix, as throughout theproject Makefiles uses `python` for `python3`. For the reason not changing Makefiles is...cause some other distro already deprecated `python2` and uses `python` solely for `python3`)
 
@@ -34,3 +34,9 @@ Error: Rank mismatch in argument ‘mu’ at (1) (rank-1 and scalar)
 2. Compile `dsmacc_Rates.f90` and `dsmacc_Util.f90` in `src/` without the flag `-fno-automatic`
 3. Regenerate Makefiles (with proper flags)
 4. Remove old and create new `install.sh` to help you build all dependencies in correct order.
+
+---
+
+# TODO
+
+- [ ] Extract time elapse/interval into parameters within models in `pysrc/`
