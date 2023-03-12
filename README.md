@@ -41,3 +41,21 @@ Error: Rank mismatch in argument ‘mu’ at (1) (rank-1 and scalar)
 
 - [ ] Extract time elapse/interval into parameters within models in `pysrc/`
 - [ ] Check time and don't re-run if `*conc.dat` is up-to-date?
+
+---
+
+# Directory Layout
+(Unofficial)
+
+- `acp/`
+- `cri/`
+- `data/`
+- `geoschem/`
+- `ISOROPIA/`
+- `kpp/`: a local kpp (supposedly version `2.2`, though document within it is for `2.1`)
+- `pysrc/`: a python plotting wrapper
+- `src/`
+- `test/`
+- `tuv_new/`
+- `UCI_fastJX72e/`
+- `working/`
