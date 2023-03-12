@@ -10,4 +10,5 @@ make "$@"
 
 cd pysrc/
 make source "$@"
+read -p "We're going to run command in `sudo`, press enter than type your password."
 sudo make install
