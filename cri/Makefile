@@ -15,9 +15,9 @@ figs: cri_conc_1.dat_O3.png
 	python ../plot.py -v "O3;label='Ozone',color='red'" $<
 
 inputs:
-	ln -s ../tuv_new/INPUTS .
-	ln -s ../tuv_new/DATA* .
-	ln -s ../data/photolysis.txt .
+	ln -fs ../tuv_new/INPUTS .
+	ln -fs ../tuv_new/DATA* .
+	ln -fs ../data/photolysis.txt .
 	ln -fs ../UCI_fastJX72e/CTM_GrdCld.dat ../UCI_fastJX72e/FJX_scat-UMa.dat ../UCI_fastJX72e/FJX_scat-aer.dat ../UCI_fastJX72e/FJX_scat-cld.dat ../UCI_fastJX72e/atmos_std.dat .
 	ln -fs ../UCI_fastJX72e/FJX_spec_mcm.dat FJX_spec.dat
 	ln -fs ../UCI_fastJX72e/FJX_j2j_mcm.dat FJX_j2j.dat
