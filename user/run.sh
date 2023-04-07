@@ -17,11 +17,16 @@ fi
 if [ "$#" -le 2 ]; then
     echo "Assuming dt=1200."
 else
-    vi +":%s/dt = \d*\.$/dt = $3./" +':wq' ../driver.f90
-    exit 2
+    if [ -n "$3" ] && [ "$3" -eq "$3" ] 2>/dev/null; then
+        vi +":%s/dt = \d*\.$/dt = $3./" +':wq' ../driver.f90
+    else
+        NAME=$3
+    fi
 fi
 if [ "$#" -le 3 ]; then
-    NAME="UserModel"
+    if [ -n "$NAME" ]; then
+        NAME="UserModel"
+    fi
 else
     NAME=$4
 fi
