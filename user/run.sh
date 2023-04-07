@@ -3,7 +3,7 @@
 #set -xe
 set -e
 
-USAGE="Usage: ./run.sh <kpp> <Init_Cons> <time_step_interval> [<ModelName>]"
+USAGE="Usage: ./run.sh <kpp> <Init_Cons> [<time_step_interval>] [<ModelName>]"
 
 if [ "$1" = "-h" ]; then
     echo $USAGE
