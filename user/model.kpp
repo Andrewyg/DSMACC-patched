@@ -1,9 +1,7 @@
 // include file with definition of the chemical species
 // and chemical equations
 
-//#INCLUDE ./mcm_subset.kpp 
-#INCLUDE user_mcm_subset.kpp
-//#INCLUDE CRI_subset.kpp
+#INCLUDE ../user/user_mcm_subset.kpp
 
 
 #INCLUDE global.inc
