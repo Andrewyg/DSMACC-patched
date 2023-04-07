@@ -12,7 +12,7 @@ all:
 	./UserModel >& $*.timeseries.log && mv Spec_1.dat $*.Spec_1.dat.timeseries && mv Rate_1.dat $*.Rate_1.dat.timeseries
 
 UserModel: user_mcm_subset.kpp cri.kpp ../src/global.inc ../src/mcmratedef.inc ../src/io.inc ../driver.f90 ../src/tuv.inc ../kpp/bin/kpp ./DATABHH ./DATAE1 ./DATAJ1 ./DATAS1 ./INPUTS
-	cd ../src && rm -f depend.mk && ../kpp/bin/kpp ../user/mcm_subset_$*.kpp dsmacc && make && mv ../bin/dsmacc ../user/$*.dsmacc
+	cd ../src && rm -f depend.mk && ../kpp/bin/kpp ../user/user_mcm_subset.kpp dsmacc && make && mv ../bin/dsmacc ../user/$*.dsmacc
 
 ./DATABHH:
 	ln -s ../tuv_new/DATABHH ./
