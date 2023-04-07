@@ -25,6 +25,9 @@ UserModel: user_mcm_subset.kpp cri.kpp ../src/global.inc ../src/mcmratedef.inc .
 ./INPUTS:
 	ln -s ../tuv_new/INPUTS ./
 
+../kpp/bin/kpp:
+	cd .. && ./install.sh
+
 clean:
 	rm -f *.Spec_1.dat.* *.Rate_1.dat.* *.diurnal.log *.timeseries.log UserModel Init_cons.dat user_mcm_subset.kpp
 	rm -rf ./DATABHH ./DATAE1 ./DATAJ1 ./DATAS1 ./INPUTS
