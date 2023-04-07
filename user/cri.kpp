@@ -2,7 +2,7 @@
 // and chemical equations
 
 //#INCLUDE ./mcm_subset.kpp 
-#INCLUDE mcm_subset_COCH4.kpp
+#INCLUDE user_mcm_subset.kpp
 //#INCLUDE CRI_subset.kpp
 
 
