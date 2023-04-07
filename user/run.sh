@@ -3,19 +3,27 @@
 #set -xe
 set -e
 
+USAGE="Usage: ./run.sh <kpp> <Init_Cons> <time_step_interval> [<ModelName>]"
+
 if [ "$1" = "-h" ]; then
-    echo "Usage: ./run.sh <kpp> <Init_Cons> [<ModelName>]"
+    echo $USAGE
     exit 1
 fi
 if [ "$#" -le 1 ]; then
     echo "Missing arguments"
-    echo "Usage: ./run.sh <kpp> <Init_Cons> [<ModelName>]"
+    echo $USAGE
     exit 1
 fi
 if [ "$#" -le 2 ]; then
+    echo "Assuming dt=1200."
+else
+    vi +":%s/dt = \d*\.$/dt = $3./" +':wq' ../driver.f90
+    exit 2
+fi
+if [ "$#" -le 3 ]; then
     NAME="UserModel"
 else
-    NAME=$3
+    NAME=$4
 fi
 
 # Patching subset kpp
